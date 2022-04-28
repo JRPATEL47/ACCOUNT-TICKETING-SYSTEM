@@ -1,12 +1,11 @@
 
-
 #define _CRT_SECURE_NO_WARNINGS
 
-  // SYSTEM LIBRARY
+  
 #include<stdio.h>
 #include<ctype.h>
 
-  //USER LIBRARY
+
 #include "commonHelpers.h"
 #include "account.h"
 
