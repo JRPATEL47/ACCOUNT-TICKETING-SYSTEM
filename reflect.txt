@@ -1,0 +1,116 @@
+==================================================
+ Assignment #2 Milestone #4
+==================================================
+  Name    : Jenish Rajnikant Patel
+  ID          : 131733206
+  Email     : jrpatel47@myseneca.ca
+  Section : NCC
+
+Ans-1:
+a) commonHelpers.h
+
+- None developed
+
+b) account.h
+
+1.
+//To validate password strength
+void checkPasswordStrength(struct UserLogin* user_login);
+
+2.
+//To check for whitespaces in user login name
+void checkSpacesUserLogin(struct UserLogin* user_login);
+
+3.
+// To archive removed accounts in accounts_arc.txt
+int archiveRemovedAccount(const struct Account* accountData);
+
+4.
+// To save the current updated accounts in accounts.txt
+int saveCurrentAccounts(const struct Account accountData[], int maxElements);
+
+5.
+//To Convert lowercase country name to uppercase country name
+void uppercaseCountry(struct Demographic* demo);
+
+c) ticket.h
+
+1.
+//This function's purpose is to search the array received in argument 2 for a match on a desired ticket number.
+int findTicketIndexByTickNum(int ticketNum, const struct Ticket ticketData[], int maxElements, int prompt_ticket_num);
+
+2.
+// To save the current updated tickets in tickets.txt
+int saveCurrentTickets(const struct Ticket ticketData[], int maxElements);
+
+3.
+// To archive closed removed tickets in tickets_arc.txt
+int archiveRemovedClosedTickets(const struct Ticket* ticketData);
+
+4.
+// To archive closed tickets in tickets_arc.txt
+void archiveClosedTickets(const struct Ticket* ticketData);
+
+d) accountTicketingUI.h
+
+1.
+//Display's the customer's main menu options until the user wishes to logout
+void  menuCustomer(struct Ticket* ticketData, struct Account* accountInfo, int maxElements);
+
+2.
+//Displays Ticket's Header
+void displayTicketHeader(void);
+
+3.
+//Display's New Tickets
+void displayNewTicketMessage(const struct AccountTicketingData* newTicket);
+
+4.
+//Display's Active Tickets
+void displayActiveTicketMessage(const struct AccountTicketingData* newTicket);
+
+5.
+//Display's Customer Tickets
+void displayCustomerTicketMessage(const  struct Ticket* displayTicket, const struct Account* accountInfo, int maxElements);
+
+6.
+//Displays Customer Ticket's Header
+void displayCustomerTicketHeader(void);
+
+7.
+//Create New Tickets For Customer
+void createNewTicket(struct Ticket* newCustomerTicket, const struct Account* accountInfo, int maxElements);
+
+8.
+//Display Agent Messages That Are Closed
+void displayAgentTicketMessage(const struct AccountTicketingData* newAgentTicket);
+
+9.
+//Validates Customer Ticket Number And Provides Index Of That Ticket Number
+void modifyCustomerTicket(struct Ticket* newCustomerTicket, struct Account* accountInfo, int maxElements);
+
+10.
+//Removes Tickets And Accounts Related To Tckets
+int removeTickets(const struct AccountTicketingData* accountTicket, struct Account* accountInfo, int* count_removed_tickets);
+
+11.
+//Validates Agent Ticket Number And Provides Index Of That Ticket Number
+void modifyAgentTicket(const struct AccountTicketingData* newAgentTicket, struct Account* accountInfo);
+
+12.
+//Validation of password and User login name
+int validatePasswordAndUserLogin(const struct Account* accountData, int maxElements);
+
+13.
+//Provides Menu For Customer Ticket Modifications
+void menuCustomerTicketModification(struct Ticket* ticketData, struct Account* accountInfo);
+
+14.
+//Provides Agent For Customer Ticket Modifications
+void menuAgentTicketModification(struct Ticket* ticketData, struct Account* accountInfo);
+
+Ans-2:
+There were many features of this assignment which I found exciting while developing this account ticketing system application. Specifically speaking, the two most enjoyable features were the two validation procedures for login and password. I have used many applications that used this feature of three login attempts. Though I faced difficulties while developing the code for this but when I successfully finished my work it felt like using a professional application with topmost security features. Also, I got to use one of my favorite string functions (strcmp) within this code block. Another feature that was quite interesting for me was validating the password pattern. The conditions for the password were exactly same as we use while logging into modern day application. It correctly determined the strength of password with 2 of each characters : digit , uppercase, lowercase and a symbol. Another reason that I liked these features is that I learnt the usage of two new C libraries namely ctype.h and string.h. I used inbuilt functions like strcmp from string library and islower, isupper, isspace and isdigit from ctype library to enable the functionality of conditions that this assignment asked for. I was a bit confused about working of these features but when I applied it into application, I was pretty confident about using them in my code. Overall, these two features really gave me a basic idea and the code behind the the security system in various applications. I really enjoyed developing above mentioned features.
+
+Ans-3:
+Personally speaking, this whole assignment was pretty challenging for me and there were situations where I got frustrated and left my work in middle. I faced one such situation while developing code for assignment 2 milestone 4. Though I attended the lecture for files, I was finding it difficult to understand its application. I knew the basic idea but I was unsuccessful in applying it into practice. I was unable to load 15 accounts and 16 tickets into my program. I reviewed my code several times but I was not able to identify the correct way of doing that. I reviewed my class lecture and used the code provided by our instructor as a sample to build my own code. It took me almost 5 to 6 hours to get that part right. It may sound like another situation that I disliked, was way back in time when I was writing code for milestone 1 in assignment 1. I faced one of the major difficulties in building correct output from getCstring function.  The most tricky part was to display error messages when the entered value did not satisfy the given conditions. I was assigning a very small size for the string array. Therefore, when I entered ''SENECA'' after ''horse'' , visual studio thrown me an exception at that point. It took me almost whole day to figure out the real problem and the email from our instructor helped me alot to overcome this issue. Finally, both the assignments combined taught me numerous concepts of C programming.
